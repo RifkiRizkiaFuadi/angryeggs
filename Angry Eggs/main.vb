@@ -6,6 +6,7 @@
     Dim topRow As Single = 0.1
     Dim rowHeight As Single = 0.1
     Dim score As Integer = 0
+    Dim pauseGame As Boolean = False
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Mengecek bila telur menyentuh bagian atas window
@@ -22,9 +23,8 @@
         If egg.Bottom > Me.ClientRectangle.Height Then
             Timer1.Enabled = False
             egg.Image = My.Resources.eggbreak
-            restart.Text = "NEW GAME"
             My.Computer.Audio.Play(Application.StartupPath & "\lose.wav")
-            MsgBox("GAME OVER !!!" & vbNewLine & vbNewLine & "Your Score : " & score)
+            MsgBox("PERMAINAN SELESAI !!!" & vbNewLine & vbNewLine & "Skor Kamu : " & score)
         End If
 
         Dim C As Single = egg.Left + egg.Width / 2
@@ -91,9 +91,8 @@
                 scoreLabel.Text = score.ToString
                 If score = 150 Then
                     Timer1.Stop()
-                    restart.Text = "NEW GAME"
                     My.Computer.Audio.Play(Application.StartupPath & "\win.wav")
-                    MsgBox("CONGRATULATION !!!" & vbNewLine & vbNewLine & "You Got Perfect Score : 150")
+                    MsgBox("SELAMAT !!!" & vbNewLine & vbNewLine & "Kamu mendapat nilai sempurna!!")
                 End If
             End If
         End If
@@ -159,9 +158,39 @@
         End
     End Sub
 
-    Private Sub restart_Click(sender As Object, e As EventArgs) Handles restart.Click
+    Private Sub restart_Click(sender As Object, e As EventArgs) Handles btn_restart.Click
         makeBrick()
         score = 0
         scoreLabel.Text = "0"
+    End Sub
+
+    Private Sub pause_Click(sender As Object, e As EventArgs) Handles btn_pause.Click
+        If pauseGame = False Then
+            Timer1.Stop()
+            btn_pause.Text = "MULAI LAGI"
+            btn_pause.ForeColor = Color.Red
+            pauseGame = True
+        Else
+            Timer1.Start()
+            btn_pause.Text = "BERHENTI"
+            btn_pause.ForeColor = Color.Black
+            pauseGame = False
+        End If
+    End Sub
+
+    Private Sub about_Click(sender As Object, e As EventArgs) Handles btn_about.Click
+        about.Show()
+        Timer1.Stop()
+        btn_pause.Text = "MULAI LAGI"
+        btn_pause.ForeColor = Color.Red
+        pauseGame = True
+    End Sub
+
+    Private Sub btn_help_Click(sender As Object, e As EventArgs) Handles btn_help.Click
+        help.Show()
+        Timer1.Stop()
+        btn_pause.Text = "MULAI LAGI"
+        btn_pause.ForeColor = Color.Red
+        pauseGame = True
     End Sub
 End Class

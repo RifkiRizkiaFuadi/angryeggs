@@ -28,8 +28,11 @@ Partial Class main
         Me.scoreLabel = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.restart = New System.Windows.Forms.Button()
         Me.ExitGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_restart = New System.Windows.Forms.Button()
+        Me.btn_pause = New System.Windows.Forms.Button()
+        Me.btn_about = New System.Windows.Forms.Button()
+        Me.btn_help = New System.Windows.Forms.Button()
         Me.bat = New System.Windows.Forms.PictureBox()
         Me.egg = New System.Windows.Forms.PictureBox()
         Me.bg = New System.Windows.Forms.PictureBox()
@@ -68,21 +71,51 @@ Partial Class main
         Me.RestartToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.RestartToolStripMenuItem.Text = "Restart"
         '
-        'restart
-        '
-        Me.restart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.restart.Location = New System.Drawing.Point(10, 9)
-        Me.restart.Name = "restart"
-        Me.restart.Size = New System.Drawing.Size(113, 23)
-        Me.restart.TabIndex = 7
-        Me.restart.Text = "RESTART GAME"
-        Me.restart.UseVisualStyleBackColor = True
-        '
         'ExitGameToolStripMenuItem
         '
         Me.ExitGameToolStripMenuItem.Name = "ExitGameToolStripMenuItem"
         Me.ExitGameToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.ExitGameToolStripMenuItem.Text = "Exit Game"
+        '
+        'btn_restart
+        '
+        Me.btn_restart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_restart.Location = New System.Drawing.Point(10, 9)
+        Me.btn_restart.Name = "btn_restart"
+        Me.btn_restart.Size = New System.Drawing.Size(113, 23)
+        Me.btn_restart.TabIndex = 7
+        Me.btn_restart.Text = "GAME BARU"
+        Me.btn_restart.UseVisualStyleBackColor = True
+        '
+        'btn_pause
+        '
+        Me.btn_pause.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_pause.Location = New System.Drawing.Point(131, 9)
+        Me.btn_pause.Name = "btn_pause"
+        Me.btn_pause.Size = New System.Drawing.Size(113, 23)
+        Me.btn_pause.TabIndex = 8
+        Me.btn_pause.Text = "BERHENTI"
+        Me.btn_pause.UseVisualStyleBackColor = True
+        '
+        'btn_about
+        '
+        Me.btn_about.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_about.Location = New System.Drawing.Point(250, 9)
+        Me.btn_about.Name = "btn_about"
+        Me.btn_about.Size = New System.Drawing.Size(113, 23)
+        Me.btn_about.TabIndex = 9
+        Me.btn_about.Text = "TENTANG"
+        Me.btn_about.UseVisualStyleBackColor = True
+        '
+        'btn_help
+        '
+        Me.btn_help.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_help.Location = New System.Drawing.Point(369, 9)
+        Me.btn_help.Name = "btn_help"
+        Me.btn_help.Size = New System.Drawing.Size(113, 23)
+        Me.btn_help.TabIndex = 10
+        Me.btn_help.Text = "PETUNJUK"
+        Me.btn_help.UseVisualStyleBackColor = True
         '
         'bat
         '
@@ -128,7 +161,10 @@ Partial Class main
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(600, 500)
         Me.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.Controls.Add(Me.restart)
+        Me.Controls.Add(Me.btn_help)
+        Me.Controls.Add(Me.btn_about)
+        Me.Controls.Add(Me.btn_pause)
+        Me.Controls.Add(Me.btn_restart)
         Me.Controls.Add(Me.bat)
         Me.Controls.Add(Me.egg)
         Me.Controls.Add(Me.scoreLabel)
@@ -156,7 +192,10 @@ Partial Class main
     Friend WithEvents egg As System.Windows.Forms.PictureBox
     Friend WithEvents bgbottom As System.Windows.Forms.PictureBox
     Friend WithEvents bat As System.Windows.Forms.PictureBox
-    Friend WithEvents restart As System.Windows.Forms.Button
+    Friend WithEvents btn_restart As System.Windows.Forms.Button
     Friend WithEvents ExitGameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btn_pause As System.Windows.Forms.Button
+    Friend WithEvents btn_about As System.Windows.Forms.Button
+    Friend WithEvents btn_help As System.Windows.Forms.Button
 
 End Class
