@@ -1,0 +1,19 @@
+body{background:#F8F8F8; font-family:Segoe UI; text-align:center;}
+p, ol, ul {color:#333333; font-size:14px; line-height: 1.5em;}
+a {text-decoration:none; color:#FF002A;}
+a:hover {color:#333333;}
+ol {margin:0; padding:15px 0 0 20px;}
+ul {margin:0; padding:5px 0 5px 20px;}
+h1 {color:#f52551; text-align:left; width:500px; margin:15px 0 0 0;}
+h3 {color:#f52551; text-align:left; margin:0 0 10px 0;}
+h4 {color:#f52551; text-align:left; width:500px; margin:0 0 20px 0;}
+h5 {margin:0; padding:0;}
+blockquote {background:#E2F0FE url(bg-quote.png) repeat-x left top; border: 1px dotted #3B5998; margin:0; padding:15px; border-radius:5px; text-align:left;}
+#menu {background:#f52551 url(bg-menu.png) repeat-x left bottom; width:498px; padding:5px 0; margin:0 auto; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; border-top-left-radius:5px; border-top-right-radius:5px;}
+#menu p {margin:0; padding:0; text-align:left;}
+#menu a {font-size:13px; font-weight:bold; padding:7px 15px; color:#FFFFFF;}
+#menu a:hover {color:#333333; background:#FFFFFF url(bg-menu-hover.png) repeat-x left top;}
+#content {background: #FFFFFF; width: 468px; margin: 0 auto; padding:15px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; border-bottom:1px solid #E1E1E1; border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+form {text-align:left; font-size:14px;}
+input {margin:0 15px 10px 0;}
+.label {margin-bottom:5pxpx; font-size:14px; padding:0;}
